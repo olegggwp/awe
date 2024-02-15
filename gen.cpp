@@ -16,7 +16,7 @@ int main(int argc, char const *argv[]) {
     for (int i = 0; i < 20; i++) {
         freopen(filename(i).c_str(), "r", stdin);
         freopen(filename(i).c_str(), "w", stdout);
-        for(long j = 0; j < 200000; j++) {
+        for(long j = 0; j < 2000000; j++) {
             cout << rnd() % 10000000 << " ";    
         }
         cout << endl;
