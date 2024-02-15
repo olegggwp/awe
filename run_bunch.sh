@@ -6,6 +6,7 @@ do
     echo "$N:" >> "$script".time
     for ((i=1; i<=10; i++))
     do
+        ./gen
         { \time -f "%e" bash "$script" "$N" ; } 2>> "$script".time
     done
 done
