@@ -1,12 +1,13 @@
 #!/bin/bash
 
 script="$1"
-for ((N=1; N<=20; N++))
+echo "" > "$script".time
+for ((N=1; N<=1; N++))
 do
+    ./gen
     echo "$N:" >> "$script".time
     for ((i=1; i<=10; i++))
     do
-        ./gen
         { \time -f "%e" bash "$script" "$N" ; } 2>> "$script".time
     done
 done
